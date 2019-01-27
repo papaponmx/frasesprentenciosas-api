@@ -8,8 +8,8 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "node run deploy && nodemon server.js",
-    "deploy": "cp ./.env.develpoment ./.env",
+    "start": "npm run deploy && nodemon server.js",
+    "deploy": "cp ./.env.development ./.env",
     "deploy:prod": "cp ./.env.production ./.env"
   },
   "dependencies": {
