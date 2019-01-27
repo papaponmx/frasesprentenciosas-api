@@ -1,0 +1,10 @@
+{
+  "name": "frasespretenciosas-api",
+  "version": "1.0.0",
+  "description": "API for frasespretenciosas.com",
+  "main": "server.js",
+  "repository": "https://github.com/papaponmx/frasesprentenciosas-api",
+  "author": "papaponmx <jaimemadrigalrios@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
