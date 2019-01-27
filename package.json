@@ -7,8 +7,15 @@
   "author": "papaponmx <jaimemadrigalrios@gmail.com>",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "start": "node run deploy && nodemon server.js",
+    "deploy": "cp ./.env.develpoment ./.env",
+    "deploy:prod": "cp ./.env.production ./.env"
+  },
   "dependencies": {
     "dotenv": "^6.2.0",
-    "fastify": "^1.13.4"
+    "fastify": "^1.13.4",
+    "fastify-mongodb": "^1.0.0",
+    "nodemon": "^1.18.9"
   }
 }
