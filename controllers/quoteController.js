@@ -28,7 +28,12 @@ exports.getSingleQuote = async (req) => {
 // Add a new Quote
 exports.addQuote = async (req) => {
   try {
-    const quote = new Quote(req.body);
+    const quoteData = {
+      ...req.body,
+      dateCreated: new Date(),
+      likesCount: 0,
+    };
+    const quote = new Quote(quoteData);
     return quote.save();
   } catch (err) {
     throw boom.boomify(err);
