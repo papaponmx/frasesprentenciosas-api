@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": " NODE_ENV=production node server.js",
+    "start": "node server.js",
     "serve": "npm run deploy && nodemon server.js",
     "deploy": "cp ./.env.development ./.env",
     "deploy:prod": "cp ./.env.production ./.env"
