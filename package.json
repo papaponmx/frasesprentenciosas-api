@@ -13,9 +13,12 @@
     "deploy:prod": "cp ./.env.production ./.env"
   },
   "dependencies": {
+    "boom": "^7.3.0",
     "dotenv": "^6.2.0",
     "fastify": "^1.13.4",
     "fastify-mongodb": "^1.0.0",
+    "fastify-swagger": "^1.1.1",
+    "mongoose": "^5.4.9",
     "nodemon": "^1.18.9"
   }
 }
