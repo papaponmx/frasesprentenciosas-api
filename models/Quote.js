@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const quoteSchema = new mongoose.Schema({
   author: String,
   dateCreated: Number,
-  likesCount: String,
+  likesCount: Number,
   quote: String,
 });
 
