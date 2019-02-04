@@ -7,6 +7,7 @@ const fastify = require('fastify')({
 const routes = require('./routes');
 // Connect to DB
 console.log('DQTP', process.env.PORT); // eslint-disable-line
+console.log('DQTP', process.env.MONGO_DB_URL); // eslint-disable-line
 mongoose.connect(process.env.MONGO_DB_URL);
 
 routes.forEach(route => {
