@@ -9,16 +9,6 @@ const routes = require('./routes');
 console.log('DQTP', process.env.MONGO_DB_URL); // eslint-disable-line
 mongoose.connect(process.env.MONGO_DB_URL);
 
-
-
-fastify.route({
-  method: 'GET',
-  url: '/',
-  handler: async (request, reply) => {
-    return { hello: 'world' };
-  }
-});
-
 routes.forEach(route => {
   fastify.route(route);
 });
