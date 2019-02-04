@@ -1,7 +1,7 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 const fastify = require('fastify')({
-  logger: true,
+  logger: !process.ENV.NODE_ENV === 'production',
 });
 
 const routes = require('./routes');
