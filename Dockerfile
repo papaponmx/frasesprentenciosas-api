@@ -1,11 +1,14 @@
 FROM node:10-alpine
-RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
-WORKDIR /home/node/app
-COPY .env.production ./.env
+WORKDIR /usr/src/app
 COPY package*.json ./
+COPY .env.production ./.env
+
 RUN npm install
+# If you are building your code for production
+# RUN npm install --only=production
+
+# Bundle app source
 COPY . .
-COPY --chown=node:node . .
-USER node
+
 EXPOSE 8080
-CMD [ "node", "server.js" ]
+CMD [ "npm", "start" ]
