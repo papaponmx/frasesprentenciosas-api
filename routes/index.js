@@ -9,28 +9,28 @@ const {
 const routes = [
   {
     method: 'GET',
-    url: '/api/quotes',
+    url: '/quotes',
     handler: getQuotes
   },
   {
     method: 'GET',
-    url: '/api/quotes/:id',
+    url: '/quotes/:id',
     handler: getSingleQuote
   },
   // TODO: Add get Random quote
   {
     method: 'POST',
-    url: '/api/quotes',
+    url: '/quotes',
     handler: addQuote
   },
   {
     method: 'PUT',
-    url: '/api/quotes/:id',
+    url: '/quotes/:id',
     handler: updateQuote
   },
   {
     method: 'DELETE',
-    url: '/api/quotes/:id',
+    url: '/quotes/:id',
     handler: deleteQuote
   },
 
