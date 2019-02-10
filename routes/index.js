@@ -9,6 +9,13 @@ const {
 const routes = [
   {
     method: 'GET',
+    url: '/',
+    handler: (request, reply) => {
+      reply.send({ hello: 'world' });
+    }
+  },
+  {
+    method: 'GET',
     url: '/quotes',
     handler: getQuotes
   },
