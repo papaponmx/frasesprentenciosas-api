@@ -4,7 +4,7 @@ const fastify = require('fastify')({
   logger: true,
 });
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 const routes = require('./routes');
 // Connect to DB
 console.log('DQTP', PORT); // eslint-disable-line
